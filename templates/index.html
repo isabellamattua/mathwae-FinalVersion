@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Mathwae | Basic Math Problem Solver</title>
+            <link rel="icon" href="/assets/favicon.png" sizes="16x16 32x32" type="image/png">
+            <link rel="stylesheet" href="style.css">
+            <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+            $(document).ready(function(){
+                if($(".calculator").css("opacity") == "0"){
+                $(".calculator").animate({opacity: "0.5"});
+                $(".calculator").animate({opacity: "1"});
+                }
+            });
+            </script>
+        </head>
+    <body>
+
+        <div class = "logo">
+            <div id="left-nav">Basic Math</div>
+            <img id="logo-img" src="assets/MathwaeLogo.svg" alt="Mathwae Logo">
+            <div id="right-nav"><img id="person-img" src="assets/person.svg" alt="Mathwae Logo" width="30px" height="30px"></div>
+        </div>
+
+
+        <div class="calculator">
+
+            <div class= "help-bubble">
+                <img src ="assets/MathwaeBubbleImg.svg" width="65px" height="75px">
+                <div id = "message-bubble">
+                    <p id = "main-message">How can I help you?</p>
+                    <p id="tiny-message"><img src ="assets/QuestionMarkImg.svg" width="13px" height="13px">Tap to view tutorial...</p>
+                </div>    
+            </div>
+
+            <!-- the output -->
+            <input id="output" type="text" placeholder="Enter a problem..." disabled>
+        
+            <!-- the input buttons -->
+            <div class="calculator-buttons">
+                <button id="clear" class="calc-button is-clear">C</button>
+                <button id="divide" class="calc-button operator">&divide;</button>
+        
+                <button id="seven" class="calc-button">7</button>
+                <button id="eight" class="calc-button">8</button>
+                <button id="nine" class="calc-button">9</button>
+                <button id="times" class="calc-button operator">&times;</button>
+        
+                <button id="four" class="calc-button">4</button>
+                <button id="five" class="calc-button">5</button>
+                <button id="six" class="calc-button">6</button>
+                <button id="minus" class="calc-button operator">&minus;</button>
+        
+                <button id="one" class="calc-button">1</button>
+                <button id="two" class="calc-button">2</button>
+                <button id="three" class="calc-button">3</button>
+                <button id="plus" class="calc-button operator">&plus;</button>
+        
+                <button id="zero" class="calc-button is-zero">0</button>
+                <button id="equals" class="calc-button is-equals" onclick= "/passData/">&equals;</button>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #F6F6F6;
+}
+
+header{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+/*------------------------------------------*/
+
+/* quick reset so all our padding is the right size */
+* {
+  box-sizing: border-box;
+}
+
+.calculator input,
+.calc-button   {
+  font-family: 'Space Mono';
+}
+
+
+/* limit the width and center */
+.calculator   {
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid rgba(17, 17, 17, 0.089); */
+  /* border-radius: 5px; */
+  position: fixed;
+  bottom: 0px;
+  background-color: #c7d2e7;
+  opacity: 0;
+}
+
+#output{
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: left;
+}
+
+::placeholder{
+  opacity: .5;
+}
+
+.calculator input   {
+  /* reset basic form styles */
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 20px;
+  width: 100%;
+  /* border-bottom: 1px solid rgba(17, 17, 17, 0.281); */
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: rgba(238, 238, 238, 0.281);
+  color: #333;
+  text-align: right;
+  font-size: 30px;
+  border-radius: 0;
+}
+
+.calc-button  {
+  background: #ffffff; /* light background with opacity 50% */
+  border: 2px solid #91a5ff; /* black border */
+  padding: 5px;
+  color: #000; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+  border-style: none none outset none;
+}
+
+.calculator-buttons {
+  /* small spacing within our container */
+  /* padding: 20px; */
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* the grid stuff! */
+  display: grid;
+
+  /* create 4 columns */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  /* add the grid gap */
+  grid-gap: 15px;
+}
+
+/* span across 3 columns */
+.is-zero,
+.is-clear   {
+  grid-column: span 3;
+}
+
+/* go blue */
+.is-clear   {
+  background: #96add2;
+}
+
+.is-equals, .operator{
+  background: #96add2;
+}
+
+
+.help-bubble{
+
+  padding-left: 25%;
+  padding-right: 25%;
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+#message-bubble{
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+
+}
+
+#tiny-message{
+  background-color: #e0e0e0;
+  color: #738dc3;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+#main-message{
+  background-color: #f0f0f0;
+  font-size: 17px;
+  padding: 8px 20px;
+  border-radius: 20px 20px 0 0;
+  
+}
+
+p{
+  margin: 0;
+}
+
+/*--------------------------------------------------------------*/
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: #99999985;
+  border-style: none none solid none;
+  border-width: 1px;
+  top:0;
+  left:0;
+  position: fixed;
+  width: 100%;
+}
+
+#left-nav{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #999999;
+  margin: 0;
+  padding-left: 25%;
+}
+
+#right-nav{
+  padding-right: 25%;
+  margin: 0;
+}
+
+#logo-img{
+  padding-top: 10px;
+  width: 10%;
+}
+
+#person-img{
+  padding-top: 10px;
+}
+
+#meme{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}

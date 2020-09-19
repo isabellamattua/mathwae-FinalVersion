@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mathwae | Basic Math Problem Solver</title>
+        <link rel="icon" href="/assets/favicon.png" sizes="16x16 32x32" type="image/png">
+        <link rel="stylesheet" href="style.css">
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                if($("#meme").css("opacity") == "0"){
+                    $("#meme").animate({opacity: "0.5"});
+                    $("#meme").animate({opacity: "1"});
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class = "logo">
+            <div id="left-nav">Basic Math</div>
+            <img id="logo-img" src="assets/MathwaeLogo.svg" alt="Mathwae Logo">
+            <div id="right-nav"><img id="person-img" src="assets/person.svg" alt="Mathwae Logo" width="30px" height="30px"></div>
+        </div>
+        <div id="meme">
+            <img id="meme-img" src="" alt="meme"><br>
+            <a href="index.html">back to main page...</a>
+        </div>
+    </body>
+</html>
